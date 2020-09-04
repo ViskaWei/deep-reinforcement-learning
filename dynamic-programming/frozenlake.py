@@ -73,6 +73,8 @@ class FrozenLakeEnv(discrete.DiscreteEnv):
 
         P = {s : {a : [] for a in range(nA)} for s in range(nS)}
 
+        self.P = P
+        
         def to_s(row, col):
             return row*ncol + col
         def inc(row, col, a):
